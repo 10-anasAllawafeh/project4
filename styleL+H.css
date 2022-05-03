@@ -1,0 +1,733 @@
+*{box-sizing: border-box;}
+body{
+    margin-top: 5%; 
+    text-align: center;
+    background-color: #8DC26F;
+    
+}
+h1{
+    color: rgba(255, 255, 255, 0.745);
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    background-color: #76b852;
+    height: 50vh;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 3% 0%;
+    padding-top: 4%;
+    border-radius: 50px;
+}
+#homeForm{
+    background-color: #76b852;
+    height: 63vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 20hv;
+    margin: 5% 25%;
+    border-radius: 50px;
+    align-content: space-evenly;
+}
+input{
+    background-color:rgb(113, 213, 74);
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.412);
+    height: 5vh;
+    text-align: center;
+    color: aliceblue;
+    font-size: large;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    margin: 0 25%;
+}
+button{
+    border: 2px solid transparent;
+    border-radius: 2.5%;
+    background-color:rgb(113, 213, 74) ;
+    color: rgba(255, 255, 255, 0.745);
+    height: 5vh;
+    font-size: large;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    border-radius: 50px;
+    
+}
+#submitt{
+    margin-left: 25%;
+}
+#submitt:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+#submittt:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#ul1{
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    background-color: rgb(213, 208, 208);
+    width:5%;
+    padding-bottom: 5%;
+    display: block;
+    border-radius: 50px;
+    opacity: 20%;
+    animation-name: move1;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul2{
+    position: absolute;
+    top: 85%;
+    left: 3%;
+    background-color: rgb(213, 208, 208);
+    width:5%;
+    padding-bottom: 5%;
+    display: block;
+    border-radius: 50px;
+    opacity: 20%;
+    animation-name: move2;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul3{
+    position: absolute;
+    top: 28%;
+    left: 60%;
+    background-color: rgb(213, 208, 208);
+    width:5%;
+    padding-bottom: 5%;
+    border-radius: 50px;
+    display: block;
+    opacity: 20%;
+    animation-name: move3;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul4{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    background-color: rgb(213, 208, 208);
+    width:10%;
+    padding-bottom: 10%;
+    display: block;
+    border-radius: 100px;
+    opacity: 20%;
+    animation-name: move4;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul5{
+    position: absolute;
+    top: 5%;
+    left: 17%;
+    background-color: rgb(213, 208, 208);
+    width:10%;
+    padding-bottom: 10%;
+    display: block;
+    border-radius: 100px;
+    opacity: 20%;
+    animation-name: move5;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul6{
+    position: absolute;
+    top: 46%;
+    left: 64%;
+    background-color: rgb(213, 208, 208);
+    width: 10%;
+    padding-bottom: 10%;
+    display: block;
+    border-radius: 100px;
+    opacity: 20%;
+    animation-name: move6;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul7{
+    position: absolute;
+    top: 61%;
+    left: 14%;
+    background-color: rgb(213, 208, 208);
+    width: 15%;
+    padding-bottom: 15%;
+    display: block;
+    border-radius: 130px;
+    opacity: 20%;
+    animation-name: move7;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul8{
+    position: absolute;
+    top: 17%;
+    left: 72%;
+    background-color: rgb(213, 208, 208);
+    width: 15%;
+    padding-bottom: 15%;
+    display: block;
+    border-radius: 130px;
+    opacity: 20%;
+    animation-name: move8;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul9{
+    position: absolute;
+    top: 29%;
+    left: 25%;
+    background-color: rgb(213, 208, 208);
+    width: 15%;
+    padding-bottom: 15%;
+    display: block;
+    border-radius: 130px;
+    opacity: 20%;
+    animation-name: move9;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#ul99{
+    position: absolute;
+    top: 11%;
+    left: 34%;
+    background-color: rgb(213, 208, 208);
+    width: 5%;
+    padding-bottom: 5%;
+    display: block;
+    border-radius: 50px;
+    opacity: 20%;
+    animation-name: move99;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#sub:hover {
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+    background: #8DC26F;
+  }
+
+
+#sub{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.745);
+    background: rgb(113, 213, 74);
+    outline: none;
+    border: 1px solid #76b852;
+    cursor: pointer;
+    padding: 5% 5%;
+    -webkit-appearance: none;
+    width: 100%;
+    letter-spacing: 2px;
+    display: block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #subdiv{
+    background-color:rgb(113, 213, 74) ;
+    width: 91%;
+    display: none;
+  }
+  P{
+    color: rgba(255, 255, 255, 0.745);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+#a11{
+    color: rgba(255, 255, 255, 0.745);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  /* //////////////////////// */
+  select{
+    color: rgba(255, 255, 255, 0.745);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color:rgb(113, 213, 74);
+    width: 100%;
+    height: 5vh;
+    letter-spacing: 4px;
+    border: none;
+    margin: 0 25%;
+    
+  }
+  
+  #selectDiv{
+   display: flex;
+   justify-content: center;
+  }
+  select:hover {
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+    background: #8DC26F;
+  }
+
+  h2,h3 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.745);
+    font-weight: 100;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+  }
+  a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.745);
+  }
+
+/* /////////////////////Animation///////////////////////////// */
+@keyframes move1 {
+    form{top:0%}
+    to{top:7%}
+    
+}
+@keyframes move2 {
+    form{top:85%}
+    to{top:78%}
+    
+}
+@keyframes move3 {
+    form{top:28%}
+    to{top:35%}
+    
+}
+@keyframes move4 {
+    form{top:17%}
+    to{top:24%}
+    
+}
+@keyframes move5 {
+    form{top:17%}
+    to{top:24%}
+    
+}
+@keyframes move6 {
+    form{top:17%}
+    to{top:24%}
+    
+}
+@keyframes move7 {
+    form{top:17%}
+    to{top:24%}
+    
+}
+@keyframes move8 {
+    form{top:17%}
+    to{top:24%}
+    
+}
+@keyframes move9 {
+    form{top:17%}
+    to{top:24%}
+    
+}
+@keyframes move99 {
+    form{top:17%}
+    to{top:24%}
+    
+}
+
+
+  /* /////////////////////media///////////////////////////// */
+  @media (min-width:1600px) and (max-width:2560px)
+  {
+    #submitt{
+        margin-top: 4%;
+        width: 50%;
+        margin-left: 25%;
+       }
+       option{
+           font-size: 12px;
+           width: 10px;
+           display: inline-block;
+       }
+    #homeForm{
+        width: 60%;
+        margin: 12% 21%;
+      }
+      #h2welcoming {
+        text-align: center;
+        font-size: 2vw;
+    }
+    a{
+        font-size: 2vw;
+    }
+    p{
+        font-size: 2vw;
+    }
+    #wName{
+        font-size: 3vw;
+    }
+    #selectForm{
+        width: 80%;
+        margin: 5% 10%;
+        align-content: center;
+       }
+   #select{
+    font-size: 1vw
+   }
+   h2{
+       font-size: 2vw;
+   }
+    
+  }
+  @media (min-width:1001px) and (max-width:1200px){
+    #h2welcoming{
+        font-size: large; 
+    }
+  }
+
+  @media (min-width:750px) and (max-width:1000px){
+    #h2welcoming{
+        font-size: larger; 
+    }
+  }
+
+
+  @media (max-width:1000px)
+  {
+    a{
+        font-size: 65%;
+    }
+    #a11{
+        font-size: 2vw;
+    }
+    #selectForm{
+        width: 80%;
+        margin: 10% 10%;
+        align-content: center;
+       }
+       #submitt{
+        margin-top: 8%;
+        width: 84%;
+        margin-left: 8%;
+       }
+   #select{
+    letter-spacing: 1px;
+    margin: 0 8%;
+   }
+    #homeForm{
+        width: 60%;
+        margin: 12% 21%;
+      }
+    #h2welcoming{
+        text-align: center;
+     font-size:large;
+     letter-spacing: 2px;
+    }
+      #par,#a22,#link{
+    font-size: 14px;
+   }
+  
+  h2,h3{
+      color: rgba(255, 255, 255);
+  }
+  p{
+    font-size: 60%;
+}
+#a11{
+    font-size: 80%;
+}
+}
+  @media (max-width:440px)
+  {
+      h1{
+        font-size: 5.5vw;
+        margin-top: 15%;
+      }
+      h2,h3{
+        font-size: 90%;
+      }
+    #h2welcoming{
+        text-align: center;
+       font-size: 65%;
+       color: white;
+       font-weight: bold;
+    } 
+    h3{
+        color: white;
+       font-weight: bold;
+    }
+    
+    #homeForm{
+        width: 70%;
+        margin: 25% 16%;
+    } 
+  
+    a{
+        font-size: 50%;
+    }
+    #a11{
+        font-size: 100%;
+    }
+    p{
+        font-size: 60%;
+    }
+    #ul1{
+        padding-bottom: 10%;
+    }
+    #ul2{
+        padding-bottom: 10%;
+    }
+    #ul3{
+        padding-bottom: 10%;
+    }
+        #selectForm{
+        width: 80%;
+        margin: 10% 10%;
+        align-content: center;
+       }
+       #submitt{
+        margin-top: 8%;
+        width: 84%;
+        margin-left: 8%;
+       }
+       #submittt{
+        margin-top: 8%;
+        width: 84%;
+        /* margin-left: 8%; */
+       }
+   #select{
+    letter-spacing: 1px;
+    margin: 0 8%;
+   }
+   button a{
+    font-size: 53%;
+   }
+   #par,#a22,#link{
+    font-size: 14px;
+   }
+   
+  }
+  @media (max-width:376px)
+  { 
+    #h2welcoming{
+        text-align: center;
+        align-content: center;
+       font-size: 60%;
+    }
+    a {
+        font-size: 40%;
+    }
+    #ul4{
+        padding-bottom: 12%;
+   }
+   #ul5{
+    padding-bottom: 12%;
+}
+   #ul6{
+    padding-bottom: 12%;
+}
+    #ul99{
+         padding-bottom: 12%;
+    }
+    
+    #homeForm{
+        width: 70%;
+        margin: 30% 18%;
+    }
+    button{
+        margin-bottom: 5%;
+    }
+    #selectForm{
+        width: 80%;
+        margin: 10% 10%;
+        align-content: center;
+       }
+       #submitt{
+        margin-top: 8%;
+        width: 84%;
+        margin-left: 8%;
+       }
+   #select{
+    letter-spacing: 1px;
+    margin: 0 8%;
+   }
+   button a{
+    font-size: 53%;
+   }
+   #par,#a22,#link{
+    font-size: 11px;
+   }
+
+  }
+  @media (max-width:321px)
+  { 
+    #h2welcoming{
+        text-align: center;
+        font-size: 70%;
+       margin-bottom:10%;
+    }
+    a {
+        font-size: 30%;
+    }
+    p{
+        font-size: 45%;
+    }
+    #ul1{
+        padding-bottom: 12%;
+    }
+    #ul2{
+        padding-bottom: 12%;
+        position: absolute;
+        top: 55%;
+    }
+    #ul3{
+        padding-bottom: 12%;
+    }
+    
+    #homeForm{
+        width: 70%;
+        margin: 30% 18%;
+    }
+    
+    #selectForm{
+        width: 80%;
+        margin: 10% 10%;
+        align-content: center;
+       }
+
+       #submitt{
+        margin-top: 8%;
+        width: 84%;
+        margin-left: 8%;
+       }
+   #select{
+    letter-spacing: 1px;
+    margin: 0 8%;
+   }
+   button a{
+    font-size: 53%;
+   }
+   #par,#a22,#link{
+    font-size: 10px;
+   }
+
+  }
+  @media (max-width:281px){
+    button{
+        height: 6vh;
+    }
+    #homeForm{
+        width: 70%;
+        margin: 30% 18%;
+    }
+    #h2welcoming{
+        margin-bottom: 15%;
+    }
+   p{
+    margin-top: 15%;
+   }
+   
+  
+   #submitt{
+    margin-top: 8%;
+    width: 84%;
+    margin-left: 8%;
+   }
+   #selectForm{
+    width: 80%;
+    margin: 10% 10%;
+    align-content: center;
+   }
+   #wName{
+    font-size: 7.5vw;
+    margin-top: 20%;
+   }
+  #a11{
+    font-size: 53%;
+   }
+   #select{
+    letter-spacing: 1px;
+    margin: 0 8%;
+   }
+   #par,#a22,#link{
+    font-size: 10px;
+   }
+  }
+
+  @media (max-height:415px){
+      #h2welcoming{
+          font-size: small;
+          letter-spacing: 0;
+          text-align:center;
+      }
+      h3{
+        font-size: small;
+        letter-spacing: 0;
+        text-align:center;
+      }
+
+      #submitt{
+          margin-top: 0;
+          height: 10vh;
+      }
+      #submittt{
+        margin-top: 0;
+        height: 10vh;
+      }
+      #selectForm{
+        height: 60vh;
+      }
+
+  }
+  @media (max-height:415px){
+    #h2welcoming{
+        font-size: x-small;
+        letter-spacing: 0;
+        text-align:center;
+    }
+    h3{
+      font-size: x-small;
+      letter-spacing: 0;
+      text-align:center;
+    }
+    #selectForm{
+        margin: 5% 10%;
+      }
+  }
