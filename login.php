@@ -6,34 +6,6 @@
 
 // if ($_SESSION["name"] != '') {
 
-    $keys=['id','name','email','phone','password','bdate'];
-    $length=[1];
-
-
-    $user=
-    [
-    // "name" => [],
-    // "email" => [],
-    // "phone" => [],
-    // "password" => [],
-    // "bdate" => [],
-    ];
-
-
-  foreach ($length as $value) 
-  {
-    array_push($user, 4,$_SESSION["name"], $_SESSION["email"], $_SESSION["phone"], $_SESSION["password"], $_SESSION["bdate"]);
-    // array_push($users["email"], $_SESSION["email"]);
-    // array_push($users["phone"], $_SESSION["phone"]);
-    // array_push($users["password"], $_SESSION["password"]);
-    // array_push($users["bdate"], $_SESSION["bdate"]);
-  }
-// }
-
-  
-$suser=array_combine($keys,$user);
-
-
 $users=[
     [
         'id' => 1,
@@ -60,10 +32,43 @@ $users=[
         'bdate' => '2000-5-13',
     ]
     ];
+
+    $keys=['id','name','email','phone','password','bdate'];
+    $length=[1];
+
+
+    $user=
+    [
+    // "name" => [],
+    // "email" => [],
+    // "phone" => [],
+    // "password" => [],
+    // "bdate" => [],
+    ];
+    $suser=[];
+
+  if (!empty($_SESSION['name'])){
+  foreach ($length as $value) 
+  {
+    array_push($user, $_SESSION["id"],$_SESSION["name"], $_SESSION["email"], $_SESSION["phone"], $_SESSION["password"], $_SESSION["bdate"]);
+    // array_push($users["email"], $_SESSION["email"]);
+    // array_push($users["phone"], $_SESSION["phone"]);
+    // array_push($users["password"], $_SESSION["password"]);
+    // array_push($users["bdate"], $_SESSION["bdate"]);
+  }
+// }
+$suser=array_combine($keys,$user);
+array_push($users, $suser);
+
+
+  }
+  
+
+
+
     
     $us="none";
 
-array_push($users, $suser);
 // print_r($users);
 
 // print_r($_SESSION);
@@ -78,6 +83,7 @@ if (isset($_POST['submit']))
     {
         if ($lemail == 'anas@gmail.com' && $lpassword == 'RRbnv*654') 
         {
+            $_SESSION=$suser;
             header('location: admin.php');
             break;
         }

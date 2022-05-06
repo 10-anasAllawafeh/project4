@@ -126,6 +126,7 @@
             }
             else 
             {
+                $_SESSION["id"]='User3';
                 $_SESSION["name"]=$_POST["userName"];
                 $_SESSION["email"]=$_POST["registerEmail"];
                 $_SESSION["phone"]=$_POST["phoneNumber"];
