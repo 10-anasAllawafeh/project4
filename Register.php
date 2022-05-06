@@ -1,10 +1,26 @@
 <?php
       session_start();
+
+      // regular expressions
       $pwd_expression = "/(^[A-Z])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/";
       $ps_regex="/^[A-Z](?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])(?=\S*[\W])\S*$/";
       $letters = "/(^[A-Z][a-z]+)(\s)([A-Z][a-z]+)(\s)([A-Z][a-z]+)(\s)([A-Z][a-z]+)/";
       $filter = "/([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/";
       $pfilter= "/[0-9]{14}/";
+
+
+
+
+      //info arrays
+    //   $keys=[];
+    //   $info=[];
+    //   $users=[
+    //       "name" => [],
+    //       "email" => [],
+    //       "phone" => [],
+    //       "password" => [],
+    //       "bdate" => [],
+    //   ];
 
 
     // $_SESSION["username"]=$_POST["userName"];
@@ -14,9 +30,9 @@
     // $_SESSION["confirmpassword"]=$_POST["registerConfPass"];
     $us= $em= $ps= $cps= $tl= $bd="none";
 
-// define variables and set to empty values
-$userErr = $emailErr = $telErr = $passwordErr = $cpasswordErr =  $dateErr = "";
-// $username = $email = $telefone = $password = $cpassword = $birthdate =  "";
+    // define variables and set to empty values
+    $userErr = $emailErr = $telErr = $passwordErr = $cpasswordErr =  $dateErr = "";
+   // $username = $email = $telefone = $password = $cpassword = $birthdate =  "";
 
       if (isset($_POST["submit"]))
         {
@@ -110,13 +126,30 @@ $userErr = $emailErr = $telErr = $passwordErr = $cpasswordErr =  $dateErr = "";
             }
             else 
             {
-                $_SESSION["username"]=$_POST["userName"];
+                $_SESSION["name"]=$_POST["userName"];
                 $_SESSION["email"]=$_POST["registerEmail"];
                 $_SESSION["phone"]=$_POST["phoneNumber"];
                 $_SESSION["password"]=$_POST["registerPass"];
-                $_SESSION["confirmpassword"]=$_POST["registerConfPass"];
+                $_SESSION["bdate"]=$_POST["date"];
+
+
+                // array_push($users["name"], $_SESSION["name"]);
+                // array_push($users["email"], $_SESSION["email"]);
+                // array_push($users["phone"], $_SESSION["phone"]);
+                // array_push($users["password"], $_SESSION["password"]);
+                // array_push($users["bdate"], $_SESSION["bdate"]);
+
+
+
+                // function redirect_with(array $items): void
+                // {
+                //     foreach ($items as $key => $value) {
+                //     $_SESSION[$key] = $value;
+                // }
 
                 header("location: login.php");
+                // redirect_to($url);
+
 
             }
                    
@@ -146,32 +179,32 @@ $userErr = $emailErr = $telErr = $passwordErr = $cpasswordErr =  $dateErr = "";
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" id="registerForm">
 
         <input type="text" name="userName" placeholder="Full name"> 
-        <span style="color:rgba(255, 255, 255, 0.745); display:<?php echo $us ?>">
+        <span style="color:red; display:<?php echo $us ?>">
         <?php echo $userErr ?>
         </span>
         
         <input type="text" name="registerEmail" placeholder="Email" >
-        <span style="color:rgba(255, 255, 255, 0.745); display:<?php echo $em ?>">
+        <span style="color:red; display:<?php echo $em ?>">
         <?php echo $emailErr ?>
         </span>
 
         <input type="tel" name="phoneNumber" placeholder="Phone # (14 digits) " pattern="[0-9]{14}" >
-        <span style="color:rgba(255, 255, 255, 0.745); display:<?php echo $tl ?>">
+        <span style="color:red; display:<?php echo $tl ?>">
         <?php echo $telErr ?>
         </span>
         
         <input type="password" name="registerPass" placeholder="Password" >
-        <span style="color:rgba(255, 255, 255, 0.745); display:<?php echo $ps ?>">
+        <span style="color:red; display:<?php echo $ps ?>">
         <?php echo $passwordErr ?>
         </span>
 
         <input type="password" name="registerConfPass" placeholder="Confirm Password" >
-        <span style="color:rgba(255, 255, 255, 0.745); display:<?php echo $cps ?>">
+        <span style="color:red; display:<?php echo $cps ?>">
         <?php echo $cpasswordErr ?>
         </span>
 
         <input type="date" name="date" >
-        <span style="color:rgba(255, 255, 255, 0.745); display:<?php echo $bd ?>">
+        <span style="color:red; display:<?php echo $bd ?>">
         <?php echo $dateErr ?>
         </span>
 
