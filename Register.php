@@ -34,6 +34,42 @@
     $userErr = $emailErr = $telErr = $passwordErr = $cpasswordErr =  $dateErr = "";
    // $username = $email = $telefone = $password = $cpassword = $birthdate =  "";
 
+
+// user data
+
+if(empty($_SESSION["users"])){
+    $_SESSION['users']=[
+        [
+            'id' => 'Admin',
+            'name' => 'Anas',
+            'email' => 'anas@gmail.com',
+            'phone' => 96245451235878,
+            'password' => 'RRbnv*654',
+            'bdate' => '1994-5-28',
+            'createDate' => '5-5-2022',
+            'LLDate' => 'Online',
+        ],
+    ];;
+}
+print_r($_SESSION["users"]);
+
+
+
+// $users=[
+//     [
+//         'id' => 1,
+//         'name' => 'Anas',
+//         'email' => 'anas@gmail.com',
+//         'phone' => 96245451235878,
+//         'password' => 'RRbnv*654',
+//         'bdate' => '1994-5-28',
+//         'createDate' => '2022-5-5'
+//     ],
+// ];
+
+
+// validation function
+
       if (isset($_POST["submit"]))
         {
             $bdate=$_POST["date"];
@@ -126,12 +162,19 @@
             }
             else 
             {
-                $_SESSION["id"]='User3';
-                $_SESSION["name"]=$_POST["userName"];
-                $_SESSION["email"]=$_POST["registerEmail"];
-                $_SESSION["phone"]=$_POST["phoneNumber"];
-                $_SESSION["password"]=$_POST["registerPass"];
-                $_SESSION["bdate"]=$_POST["date"];
+                $create_Date= date("d-m-Y H:i:s");
+                $arr=['id' =>'', 'name' =>$_POST["userName"],'email' =>$_POST["registerEmail"],'phone' =>$_POST["phoneNumber"],'password' =>$_POST["registerPass"],'bdate' =>$_POST["date"], 'createDate'=>$create_Date ,'LLDate' => 'unavailable'];
+                // $_SESSION["id"]='User';
+                // $_SESSION["name"]=$_POST["userName"];
+                // $_SESSION["email"]=$_POST["registerEmail"];
+                // $_SESSION["phone"]=$_POST["phoneNumber"];
+                // $_SESSION["password"]=$_POST["registerPass"];
+                // $_SESSION["bdate"]=$_POST["date"];
+
+                
+
+                array_push($_SESSION['users'], $arr);
+                // $_SESSION=$users;
 
 
                 // array_push($users["name"], $_SESSION["name"]);

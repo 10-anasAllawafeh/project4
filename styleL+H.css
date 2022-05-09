@@ -9,7 +9,7 @@ h1{
     color: rgba(255, 255, 255, 0.745);
     font-family: Arial, Helvetica, sans-serif;
 }
-form{
+form,table{
     background-color: #76b852;
     height: 50vh;
     display: inline-block;
